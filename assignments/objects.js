@@ -91,35 +91,36 @@ console.log(int5.multiplyNums(3,4));
 // 4. Give each of the objects the ability to speak their names using the this keyword.
 
 const parent = {
-  'name': 'Susan',
-  'age': 70, 
-  speak: function() {
-    return 'My name is Susan';
+  name: 'Susan',
+  age: 70, 
+  speak: function(){
+    console.log(this.name);
   },
-  {
-    'name': 'George',
-    'age': 50,
-    speak; function(){
-      return 'My name is George';
+  child: {
+    name: 'George',
+    age: 50,
+    speak: function(){
+      console.log(this.name);
     },
-    {
-      'name': 'Sam',
-      'age': 30,
+    grandchild: {
+      name: 'Sam',
+      age: 30,
       speak: function(){
-        return 'My name is Sam';
-      },
-    },
-  },
-}
+        console.log(this.name);
+      }, 
+    }, // sam
+  }, // george
+}; // susan
 
 // Log the parent object's name
-
+console.log(parent.name);
 // Log the child's age
-
+console.log(parent.child.age);
 // Log the name and age of the grandchild
-
+console.log(parent.child.grandchild.name, parent.child.grandchild.age);
 // Have the parent speak
-
+console.log(parent.speak());
 // Have the child speak
-
+console.log(parent.child.speak());
 // Have the grandchild speak
+console.log(parent.child.grandchild.speak());
