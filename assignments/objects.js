@@ -94,19 +94,19 @@ const parent = {
   name: 'Susan',
   age: 70, 
   speak: function(){
-    console.log(this.name);
+    return this.name;
   },
   child: {
     name: 'George',
     age: 50,
     speak: function(){
-      console.log(this.name);
+      return this.name;
     },
     grandchild: {
       name: 'Sam',
       age: 30,
       speak: function(){
-        console.log(this.name);
+        return this.name;
       }, 
     }, // sam
   }, // george
